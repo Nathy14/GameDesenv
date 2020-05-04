@@ -1,0 +1,3 @@
+﻿  main.cpp
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: símbolo externo indefinido SDL_main referenciado na função main_getcmdline
+D:\projetos\GameDesenv\2D_Game\x64\Debug\2D_Game.exe : fatal error LNK1120: 1 externo não resolvidos
