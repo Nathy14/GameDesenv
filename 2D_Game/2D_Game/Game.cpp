@@ -44,7 +44,11 @@ void Game::handleEvents(){
 	}
 }
 
-void Game::update(){}
+void Game::update(){
+	cnt++;
+	std::cout << "cnt" std::endl;
+
+}
 
 void Game::render(){
 	SDL_RenderClear(renderer);
