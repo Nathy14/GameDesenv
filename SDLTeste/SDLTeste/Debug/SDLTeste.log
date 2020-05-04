@@ -1,0 +1,5 @@
+﻿  main.cpp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo indefinido _main referenciado na função "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\dev\SDL2\lib\x64\SDL2.lib : warning LNK4272: o tipo de máquina da biblioteca 'x64' está em conflito com o tipo de máquina de destino 'x86'
+C:\dev\SDL2\lib\x64\SDL2main.lib : warning LNK4272: o tipo de máquina da biblioteca 'x64' está em conflito com o tipo de máquina de destino 'x86'
+D:\projetos\SDLTeste\Debug\SDLTeste.exe : fatal error LNK1120: 1 externo não resolvidos
