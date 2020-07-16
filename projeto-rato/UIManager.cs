@@ -27,7 +27,7 @@ public class UIManager: NetworkBehaviour{
   //button will tell which phase the game will be = Initialized Phase, Compile Phase or Execute Phase
   public void UpdateButtonText(string gameState){
     Button = GameObject.Find("Button");
-    Button.GetComponentInChildren<Text>().text = gameState; //because text is a child od Button object
+    Button.GetComponentInChildren<Text>().text = gameState; //because text is a child of Button object
 
   //change the collor of the sockets
   public void HighlightTurn(int turnOrder){
@@ -56,8 +56,20 @@ public class UIManager: NetworkBehaviour{
           }
         }
         else{
-          PlayerManager.EnemySockets[PlayerManager.CardsPlayed-1].GetComponent<Outline>().effectColor = blueColor;
+          PlayerManager.PlayerSockets[PlayerManager.CardsPlayed-1].GetComponent<Outline>().effectColor = blueColor;
+          if(isClientOnly){
+            PlayerManager.EnemySockets[PlayerManager.CardsPlayed-1].GetComponent<Outline>().effectColor = color.magenta;
+          }
+          else{
+            PlayerManager.EnemySockets[PlayerManager.CardsPlayed].GetComponent<Outline>().effectColor = color.magenta;
+          }
         }
+      }
+    }
+    else if(turnOrder == 10){
+      for(int i = 0; i<5; i++){
+        PlayerManager.EnemySockets[i].GetComponent<Outline>().effectColor = blueColor;
+        PlayerManager.PlayerSockets[i].GetComponent<Outline>().effectColor = blueColor;
       }
     }
   }

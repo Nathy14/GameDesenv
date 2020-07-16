@@ -30,6 +30,7 @@ public class GameManager: NetworkBehaviour{
     else if(stateRequest == "Compile{}"){
       if(ReadyClicks = 1){
         GameState = "Compile{}";
+        UIManager.HighlightTurn(TurnOrder);
       }
     }
     else if(stateRequest == "Execute{}"){
